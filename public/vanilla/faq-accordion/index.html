@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="description" content="FAQ accordion component" />
+    <title>FAQ Accordion</title>
+  </head>
+  <body>
+    <main>
+      <article class="faq__container">
+        <div class="faq__header">
+          <img
+            class="faq__icon"
+            src="./assets/images/icon-star.svg"
+            alt="star icon"
+          />
+          <h1 class="faq__title">FAQs</h1>
+        </div>
+        <div class="accordion">
+          <div class="accordion__item is-active">
+            <button class="accordion__trigger">
+              <span>What is Frontend Mentor, and how will it help me?</span>
+              <div class="accordion__trigger-indicator">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="plus icon"
+                  class="plus-icon"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="minus icon"
+                  class="minus-icon"
+                />
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It’s suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span>Is Frontend Mentor free?</span>
+              <div class="accordion__trigger-indicator">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="plus icon"
+                  class="plus-icon"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="minus icon"
+                  class="minus-icon"
+                />
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>
+                The majority of our challenges are free, yes. We do have some
+                that are premium and require a Pro subscription to access. It
+                will say on each challenge whether they are free or premium, so
+                it's easy to tell the difference.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span>Can I use Frontend Mentor projects in my portfolio?</span>
+              <div class="accordion__trigger-indicator">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="plus icon"
+                  class="plus-icon"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="minus icon"
+                  class="minus-icon"
+                />
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>
+                Definitely! Please do feel free to use whatever you build in
+                your portfolio. Helping developers add professional-looking
+                projects to their portfolio was one of the reasons we created
+                this platform!
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span>How can I get help if I'm stuck on a challenge?</span>
+              <div class="accordion__trigger-indicator">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="plus icon"
+                  class="plus-icon"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="minus icon"
+                  class="minus-icon"
+                />
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>
+                The best (and quickest) way to get help on a challenge is in our
+                Discord server. There are thousands of other developers in
+                there, so it's a great place to ask questions. We even have a
+                dedicated "help" channel! If you haven't joined yet, you can get
+                an invite to our Discord server here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

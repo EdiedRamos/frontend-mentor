@@ -1,0 +1,172 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --purple-100: #f8eeff;
+  --purple-600: #8b6990;
+  --purple-900: #301534;
+  --violet-600: #ad28eb;
+
+  --spacing-base: 8px;
+  --spacing-100: var(--spacing-base);
+  --spacing-200: calc(var(--spacing-base) * 2);
+  --spacing-300: calc(var(--spacing-base) * 3);
+  --spacing-400: calc(var(--spacing-base) * 4);
+  --spacing-500: calc(var(--spacing-base) * 5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+main {
+  display: grid;
+  position: relative;
+  place-items: center;
+  z-index: 0;
+  background-color: var(--purple-100);
+  min-height: 100vh;
+}
+
+main::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url('./assets/images/background-pattern-mobile.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 14.5rem;
+  content: '';
+}
+
+.faq__container {
+  margin: var(--spacing-300);
+  border-radius: var(--spacing-200);
+  background-color: var(--white);
+  padding: var(--spacing-500);
+  max-width: 37.5rem;
+}
+
+.faq__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-300);
+  margin-bottom: var(--spacing-400);
+}
+
+.faq__icon {
+  --size: 1.5rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.faq__title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--purple-100);
+  padding: var(--spacing-300) 0;
+}
+
+.accordion .accordion__item:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.accordion .accordion__item:first-child {
+  padding-top: 0;
+}
+
+.accordion__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-300);
+  cursor: pointer;
+  border: 0;
+  background-color: var(--white);
+  width: 100%;
+}
+
+.accordion__trigger:hover,
+.accordion__trigger:focus-visible {
+  color: var(--violet-600);
+}
+
+.accordion__trigger:focus-visible {
+  outline: 1px solid var(--violet-600);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.accordion__trigger span {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-align: start;
+}
+
+.accordion__trigger-indicator .minus-icon {
+  display: none;
+}
+
+.accordion__content {
+  display: none;
+  padding-top: var(--spacing-300);
+}
+
+.accordion__content p {
+  color: var(--purple-600);
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0;
+}
+
+/* Render control */
+
+.accordion__item.is-active .accordion__content {
+  display: inline-block;
+}
+
+.accordion__item.is-active .accordion__trigger-indicator .minus-icon {
+  display: inline-block;
+}
+
+.accordion__item.is-active .accordion__trigger-indicator .plus-icon {
+  display: none;
+}
+
+/* Tablet and Desktop */
+
+@media screen and (min-width: 768px) {
+  main::before {
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    height: 20rem;
+  }
+
+  .faq__icon {
+    --size: 2.5rem;
+  }
+
+  .faq__title {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+  }
+
+  .accordion__trigger span {
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+  }
+
+  .accordion__content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
