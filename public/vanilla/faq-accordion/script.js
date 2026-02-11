@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!trigger) return;
 
     const contentContainer = trigger.closest('.accordion__item');
+
+    const activeItems = document.querySelectorAll('.accordion__item.is-active');
+    activeItems.forEach(
+      (item) => item !== contentContainer && item.classList.remove('is-active'),
+    );
+
     if (contentContainer) contentContainer.classList.toggle('is-active');
   });
 });

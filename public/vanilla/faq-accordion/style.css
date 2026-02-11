@@ -22,9 +22,9 @@
 }
 
 main {
-  display: grid;
+  display: flex;
   position: relative;
-  place-items: center;
+  justify-content: center;
   z-index: 0;
   background-color: var(--purple-100);
   min-height: 100vh;
@@ -49,6 +49,8 @@ main::before {
   padding: var(--spacing-500);
   max-width: 37.5rem;
   box-shadow: 0 32px 56px rgba(80, 0, 118, 0.1);
+  height: fit-content;
+  margin-top: 130.5px;
 }
 
 .faq__header {
@@ -119,8 +121,17 @@ main::before {
   display: none;
 }
 
+.content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms ease-in;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
 .accordion__content {
-  display: none;
   padding-top: var(--spacing-300);
 }
 
@@ -133,8 +144,8 @@ main::before {
 
 /* Render control */
 
-.accordion__item.is-active .accordion__content {
-  display: inline-block;
+.accordion__item.is-active .content-wrapper {
+  grid-template-rows: 1fr;
 }
 
 .accordion__item.is-active .accordion__trigger-indicator .minus-icon {
@@ -151,6 +162,10 @@ main::before {
   main::before {
     background-image: url('./assets/images/background-pattern-desktop.svg');
     height: 20rem;
+  }
+
+  .faq__container {
+    margin-top: 167.5px;
   }
 
   .faq__icon {
