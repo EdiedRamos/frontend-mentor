@@ -48,6 +48,7 @@ main::before {
   background-color: var(--white);
   padding: var(--spacing-500);
   max-width: 37.5rem;
+  box-shadow: 0 32px 56px rgba(80, 0, 118, 0.1);
 }
 
 .faq__header {
@@ -64,6 +65,7 @@ main::before {
 }
 
 .faq__title {
+  color: var(--purple-900);
   font-weight: bold;
   font-size: 2rem;
   line-height: normal;
