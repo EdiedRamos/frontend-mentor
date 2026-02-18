@@ -6,6 +6,10 @@ const Projects = [
     name: 'Article Preview Component',
     url: '/vanilla/article-preview-component/index.html',
   },
+  {
+    name: 'Contact Form',
+    url: '/vanilla/contact-form/index.html',
+  },
 ];
 
 export default function Home() {

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Accesible contact form" />
+    <title>Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <h1>Contact Us</h1>
+        <div class="form__input-group">
+          <label for="first-name-input"
+            >First Name <span aria-hidden="true">*</span></label
+          >
+          <input
+            type="text"
+            name="first-name"
+            id="first-name-input"
+            required
+            aria-describedby="first-name-error"
+            aria-invalid="false"
+          />
+          <span
+            id="first-name-error"
+            class="form__field--required"
+            aria-live="polite"
+            >This field is required</span
+          >
+        </div>
+        <div class="form__input-group">
+          <label for="last-name-input"
+            >Last Name <span aria-hidden="true">*</span></label
+          >
+          <input
+            type="text"
+            name="last-name"
+            id="last-name-input"
+            required
+            aria-describedby="last-name-error"
+            aria-invalid="false"
+          />
+          <span
+            id="last-name-error"
+            class="form__field--required"
+            aria-live="polite"
+            >This field is required</span
+          >
+        </div>
+        <div class="form__input-group">
+          <label for="email-input">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            required
+            aria-describedby="email-error"
+            aria-invalid="false"
+          />
+          <span
+            id="email-error"
+            class="form__field--required"
+            aria-live="polite"
+            >This field is required</span
+          >
+        </div>
+        <div class="form__input-group">
+          <fieldset>
+            <legend>Query Type <span aria-hidden="true">*</span></legend>
+            <label>
+              <input
+                type="radio"
+                name="query-type"
+                id="general-enquiry"
+                value="General Enquiry"
+                required
+                aria-describedby="query-type-error"
+                aria-invalid="false"
+              />
+              <span>General Enquiry</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="query-type"
+                id="support-request"
+                value="Support Request"
+                aria-describedby="query-type-error"
+                aria-invalid="false"
+              />
+              <span>Support Request</span>
+            </label>
+            <span
+              id="query-type-error"
+              class="form__field--required"
+              aria-live="polite"
+              >This field is required</span
+            >
+          </fieldset>
+        </div>
+        <div class="form__input-group">
+          <label for="message-input"
+            >Message <span aria-hidden="true">*</span></label
+          >
+          <textarea
+            name="message"
+            id="message-input"
+            aria-describedby="message-error"
+            aria-invalid="false"
+          ></textarea>
+          <span
+            id="message-error"
+            class="form__field--required"
+            aria-live="polite"
+            >This field is required</span
+          >
+        </div>
+        <div class="form__input-group">
+          <div>
+            <input
+              type="checkbox"
+              name="contact-consent"
+              id="contact-consent-input"
+              required
+              aria-describedby="contact-consent-error"
+              aria-invalid="false"
+            />
+            <label for="contact-consent-input"
+              >I consent to being contacted by the team
+              <span aria-hidden="true">*</span></label
+            >
+          </div>
+          <span
+            id="contact-consent-error"
+            class="form__field--required"
+            aria-live="polite"
+            >To submit this form, please consent to being contacted</span
+          >
+        </div>
+        <div class="form__input-group">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
