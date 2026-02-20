@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -18,7 +23,7 @@
     <main>
       <form>
         <h1>Contact Us</h1>
-        <div class="form__input-group">
+        <div>
           <label for="first-name-input"
             >First Name <span aria-hidden="true">*</span></label
           >
@@ -37,7 +42,7 @@
             >This field is required</span
           >
         </div>
-        <div class="form__input-group">
+        <div>
           <label for="last-name-input"
             >Last Name <span aria-hidden="true">*</span></label
           >
@@ -56,7 +61,7 @@
             >This field is required</span
           >
         </div>
-        <div class="form__input-group">
+        <div>
           <label for="email-input">Email Address</label>
           <input
             type="email"
@@ -73,32 +78,34 @@
             >This field is required</span
           >
         </div>
-        <div class="form__input-group">
+        <div>
           <fieldset>
             <legend>Query Type <span aria-hidden="true">*</span></legend>
-            <label>
-              <input
-                type="radio"
-                name="query-type"
-                id="general-enquiry"
-                value="General Enquiry"
-                required
-                aria-describedby="query-type-error"
-                aria-invalid="false"
-              />
-              <span>General Enquiry</span>
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="query-type"
-                id="support-request"
-                value="Support Request"
-                aria-describedby="query-type-error"
-                aria-invalid="false"
-              />
-              <span>Support Request</span>
-            </label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="query-type"
+                  id="general-enquiry"
+                  value="General Enquiry"
+                  required
+                  aria-describedby="query-type-error"
+                  aria-invalid="false"
+                />
+                <span>General Enquiry</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="query-type"
+                  id="support-request"
+                  value="Support Request"
+                  aria-describedby="query-type-error"
+                  aria-invalid="false"
+                />
+                <span>Support Request</span>
+              </label>
+            </div>
             <span
               id="query-type-error"
               class="form__field--required"
@@ -107,7 +114,7 @@
             >
           </fieldset>
         </div>
-        <div class="form__input-group">
+        <div>
           <label for="message-input"
             >Message <span aria-hidden="true">*</span></label
           >
@@ -124,7 +131,7 @@
             >This field is required</span
           >
         </div>
-        <div class="form__input-group">
+        <div>
           <div>
             <input
               type="checkbox"
@@ -146,7 +153,7 @@
             >To submit this form, please consent to being contacted</span
           >
         </div>
-        <div class="form__input-group">
+        <div>
           <button type="submit">Submit</button>
         </div>
       </form>

@@ -5,6 +5,7 @@
   --grey-900: #2a4144;
   --green-200: #e0f1e8;
   --green-600: #0c7d69;
+  --green-900: #0e3f35;
 
   --spacing-base: 8px;
   --spacing-100: var(--spacing-base);
@@ -21,4 +22,119 @@
   margin: 0;
   padding: 0;
   font-family: 'Karla', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-200);
+  min-height: 100dvh;
+}
+
+form {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  padding: 1.5rem;
+  /* width: 100vw; */
+  max-width: 46rem;
+}
+
+form > div {
+  display: flex;
+  grid-column: span 12;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form > div:nth-of-type(6) {
+  margin-block: 2.5rem;
+}
+
+form > div:nth-of-type(3),
+form > div:nth-of-type(4),
+form > div:nth-of-type(5) {
+  margin-top: 1.5rem;
+}
+
+h1 {
+  grid-column: span 12;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+input,
+textarea,
+label:has(input) {
+  border: 1px solid var(--grey-500);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  gap: 1rem;
+}
+
+fieldset > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+fieldset > div label {
+  width: 100%;
+}
+
+fieldset > legend {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  transition: background 250ms;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: var(--green-600);
+  padding: 1rem;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--green-900);
+}
+
+button {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    margin: 2.4375rem;
+    padding: 2.5rem;
+  }
+
+  form > div:first-of-type,
+  form > div:nth-of-type(2) {
+    grid-column: span 6;
+  }
+
+  fieldset > div {
+    flex-direction: row;
+  }
 }
