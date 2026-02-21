@@ -21,7 +21,7 @@
   </head>
   <body>
     <main>
-      <form>
+      <form action="#" novalidate>
         <h1>Contact Us</h1>
         <div>
           <label for="first-name-input"
@@ -35,6 +35,7 @@
             aria-describedby="first-name-error"
             aria-invalid="false"
             autocomplete="name"
+            pattern="\s*\S.*"
           />
           <span
             id="first-name-error"
@@ -54,6 +55,7 @@
             required
             aria-describedby="last-name-error"
             aria-invalid="false"
+            pattern="\s*\S.*"
           />
           <span
             id="last-name-error"
@@ -103,6 +105,7 @@
                   name="query-type"
                   id="support-request"
                   value="Support Request"
+                  required
                   aria-describedby="query-type-error"
                   aria-invalid="false"
                 />
@@ -126,6 +129,7 @@
             id="message-input"
             aria-describedby="message-error"
             aria-invalid="false"
+            required
           ></textarea>
           <span
             id="message-error"
@@ -160,6 +164,10 @@
           <button type="submit">Submit</button>
         </div>
       </form>
+      <div id="success-alert" role="alert" aria-hidden="true">
+        <strong>Message Sent!</strong>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
     </main>
   </body>
 </html>

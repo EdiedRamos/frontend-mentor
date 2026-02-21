@@ -27,6 +27,7 @@
 
 main {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   background-color: var(--green-200);
@@ -74,8 +75,8 @@ input[type='radio'] {
   outline-color: transparent;
   border-radius: 0;
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 input[type='checkbox'] {
@@ -121,6 +122,11 @@ input:focus,
 textarea:focus,
 label:has(input:focus) {
   outline: 1px solid var(--green-600);
+}
+
+input:not([type='radio'], [type='checkbox'])[aria-invalid='true'],
+textarea[aria-invalid='true'] {
+  outline-color: var(--red);
 }
 
 label:not(:has(input)) span,
@@ -197,6 +203,53 @@ span[id*='error'] {
 label {
   font-size: 1rem;
   line-height: 150%;
+}
+
+div#success-alert {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  visibility: hidden;
+  transition:
+    transform 250ms ease-in-out,
+    visibility 250ms;
+  transition-delay: 500ms;
+  border-radius: 0.75rem;
+  background-color: var(--grey-900);
+  padding: 1.5rem;
+  width: fit-content;
+
+  strong {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 150%;
+
+    &::before {
+      display: inline-block;
+      background: url(./assets/images/icon-success-check.svg) no-repeat center;
+      width: 1.5rem;
+      height: 1.5rem;
+      content: '';
+      line-height: 150%;
+    }
+  }
+
+  * {
+    color: var(--white);
+  }
+
+  * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+div#success-alert[aria-hidden='false'] {
+  transform: translateX(-50%) translateY(1.5rem);
+  visibility: visible;
 }
 
 @media screen and (min-width: 768px) {
