@@ -34,6 +34,7 @@
             required
             aria-describedby="first-name-error"
             aria-invalid="false"
+            autocomplete="name"
           />
           <span
             id="first-name-error"
@@ -62,7 +63,9 @@
           >
         </div>
         <div>
-          <label for="email-input">Email Address</label>
+          <label for="email-input"
+            >Email Address <span aria-hidden="true">*</span></label
+          >
           <input
             type="email"
             name="email"
